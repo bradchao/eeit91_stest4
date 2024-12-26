@@ -1,0 +1,15 @@
+Page1
+<hr />
+Bike speed: <span th:text="${bike.speed}"></span>
+<hr />
+Lottery: <span th:text="${lottery}"></span>
+<hr />
+<p th:if="${member.age >= 18}">OK</p>
+<p th:unless="${member.age >= 18}">XX</p>
+<hr />
+<table border="1" width="100%">
+	<tr th:each="member : ${list}">
+		<td th:text="${member.account}"></td>
+		<td th:text="${member.age}"></td>
+	</tr>
+</table>
