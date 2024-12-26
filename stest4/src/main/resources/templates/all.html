@@ -1,0 +1,9 @@
+Product List
+<hr />
+<table border="1" width="100%">
+	<tr th:each="product : ${list}">
+		<td th:text="${product.productId}"></td>
+		<td th:text="${product.productName}"></td>
+		<td th:text="${product.unitPrice}"></td>
+	</tr>
+</table>
