@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import tw.brad.stest4.model.Products;
+import tw.brad.stest4.repository.ProductsRepository;
 import tw.brad.stest4.repository.Test1;
 
 @RequestMapping("/brad")
@@ -14,18 +15,21 @@ import tw.brad.stest4.repository.Test1;
 public class Brad {
 
 	@Autowired
-	private HotelRepository hotelRepository;
+	private ProductsRepository productsRepository;
 
 	@Autowired
 	private Test1 test1;
+	
+	
 
 	@RequestMapping("/test1")
 	public void test1() {
-		if (test1 == null) {
+		if (productsRepository == null) {
 			System.out.println("null");
+		}else {
+			List<Products> list = productsRepository.findAll();
+			System.out.println(list.size());
 		}
-		List<Products> list = test1.findAll();
-		System.out.println(list.size());
 		
 	}
 	

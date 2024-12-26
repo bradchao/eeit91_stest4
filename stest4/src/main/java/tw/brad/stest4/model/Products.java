@@ -8,42 +8,40 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "products")
 public class Products {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "ProductID")
-	private Integer productId;
+	private Integer productid;
 	
-	@Column(name = "productname")
-	private String productName;
+	private String productname;
 	
-	@Column(name = "unitprice")
-	private double unitPrice;
+	private double unitprice;
 
-	public Integer getProductId() {
-		return productId;
+
+
+	public Integer getProductid() {
+		return productid;
 	}
 
-	public void setProductId(Integer productId) {
-		this.productId = productId;
+	public void setProductid(Integer productid) {
+		this.productid = productid;
 	}
 
-	public String getProductName() {
-		return productName;
+	public String getProductname() {
+		return productname;
 	}
 
-	public void setProductName(String productName) {
-		this.productName = productName;
+	public void setProductname(String productname) {
+		this.productname = productname;
 	}
 
-	public double getUnitPrice() {
-		return unitPrice;
+	public double getUnitprice() {
+		return unitprice;
 	}
 
-	public void setUnitPrice(double unitPrice) {
-		this.unitPrice = unitPrice;
+	public void setUnitprice(double unitprice) {
+		this.unitprice = unitprice;
 	}
 
 	

@@ -27,7 +27,7 @@ public class ProductsController {
 //		model.addAttribute("list", list);
 
 
-		if (test1 == null) {
+		if (productsRepository == null) {
 			System.out.println("XX");
 		}
 		
